@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faceless Reels Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafafa;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .reel-container {
+            perspective: 1000px;
+        }
+        
+        .reel-card {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .reel-card:hover {
+            transform: rotateY(10deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-camera-retro text-2xl gradient-text"></i>
+                <h1 class="text-xl font-bold gradient-text">ReelVision</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-700 hover:text-pink-500 transition">Home</a>
+                <a href="#" class="text-gray-700 hover:text-pink-500 transition">Reels</a>
+                <a href="#" class="text-gray-700 hover:text-pink-500 transition">Templates</a>
+                <a href="#" class="text-gray-700 hover:text-pink-500 transition">About</a>
+            </nav>
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">Faceless Content Revolution</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                Premium faceless reels created with Whop.com templates. Engaging content without showing your face.
+            </p>
+            
+            <!-- Name Suggestions -->
+            <div class="bg-white rounded-xl shadow-lg p-6 max-w-4xl mx-auto mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Instagram Name Ideas</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg border border-purple-100">
+                        <h3 class="font-bold text-purple-700">ReelVision</h3>
+                        <p class="text-sm text-gray-600">For visionary reel content</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg border border-blue-100">
+                        <h3 class="font-bold text-blue-700">FacelessMagic</h3>
+                        <p class="text-sm text-gray-600">Magical content without faces</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-lg border border-yellow-100">
+                        <h3 class="font-bold text-orange-700">WhopReels</h3>
+                        <p class="text-sm text-gray-600">Direct connection to your tool</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-green-50 to-teal-50 p-4 rounded-lg border border-green-100">
+                        <h3 class="font-bold text-green-700">NoFaceFame</h3>
+                        <p class="text-sm text-gray-600">Achieve fame anonymously</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-red-50 to-pink-50 p-4 rounded-lg border border-red-100">
+                        <h3 class="font-bold text-red-700">ReelCraftPro</h3>
+                        <p class="text-sm text-gray-600">Professional reel crafting</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg border border-indigo-100">
+                        <h3 class="font-bold text-indigo-700">SilentStoryteller</h3>
+                        <p class="text-sm text-gray-600">Telling stories without words</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center space-x-4">
+                <button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition shadow-lg">
+                    <i class="fab fa-instagram mr-2"></i> Follow Us
+                </button>
+                <button class="bg-white text-gray-800 px-6 py-3 rounded-full font-medium border border-gray-300 hover:bg-gray-50 transition shadow">
+                    <i class="fas fa-play-circle mr-2 text-purple-500"></i> Watch Reels
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Faceless Content?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-secret text-purple-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Privacy Protection</h3>
+                    <p class="text-gray-600">Maintain your anonymity while building your brand and audience.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition card-hover">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Quick Production</h3>
+                    <p class="text-gray-600">Whop.com templates help you create content faster than ever.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition card-hover">
+                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Proven Engagement</h3>
+                    <p class="text-gray-600">Faceless content often performs better in algorithm rankings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reels Showcase -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Featured Reels</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Reel 1 -->
+                <div class="reel-container">
+                    <div class="reel-card bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="relative pt-[56.25%] bg-gradient-to-br from-purple-100 to-pink-100">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-play-circle text-5xl text-white opacity-80"></i>
+                            </div>
+                            <span class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">0:15</span>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white">
+                                    <i class="fas fa-film text-xs"></i>
+                                </div>
+                                <span class="ml-2 text-sm font-medium">Trending Template</span>
+                            </div>
+                            <p class="text-gray-700 mb-3">How to create viral faceless content in minutes</p>
+                            <div class="flex justify-between text-xs text-gray-500">
+                                <span><i class="far fa-heart mr-1"></i> 2.4K</span>
+                                <span><i class="far fa-comment mr-1"></i> 143</span>
+                                <span><i class="fas fa-share mr-1"></i> Share</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reel 2 -->
+                <div class="reel-container">
+                    <div class="reel-card bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="relative pt-[56.25%] bg-gradient-to-br from-blue-100 to-cyan-100">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-play-circle text-5xl text-white opacity-80"></i>
+                            </div>
+                            <span class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">0:22</span>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white">
+                                    <i class="fas fa-chart-pie text-xs"></i>
+                                </div>
+                                <span class="ml-2 text-sm font-medium">Analytics Tip</span>
+                            </div>
+                            <p class="text-gray-700 mb-3">Best times to post faceless content for max views</p>
+                            <div class="flex justify-between text-xs text-gray-500">
+                                <span><i class="far fa-heart mr-1"></i> 3.1K</span>
+                                <span><i class="far fa-comment mr-1"></i> 87</span>
+                                <span><i class="fas fa-share mr-1"></i> Share</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reel 3 -->
+                <div class="reel-container">
+                    <div class="reel-card bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="relative pt-[56.25%] bg-gradient-to-br from-yellow-100 to-orange-100">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-play-circle text-5xl text-white opacity-80"></i>
+                            </div>
+                            <span class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">0:18</span>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center text-white">
+                                    <i class="fas fa-lightbulb text-xs"></i>
+                                </div>
+                                <span class="ml-2 text-sm font-medium">Creative Idea</span>
+                            </div>
+                            <p class="text-gray-700 mb-3">5 niche ideas for faceless content creators</p>
+                            <div class="flex justify-between text-xs text-gray-500">
+                                <span><i class="far fa-heart mr-1"></i> 4.7K</span>
+                                <span><i class="far fa-comment mr-1"></i> 212</span>
+                                <span><i class="fas fa-share mr-1"></i> Share</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Start Your Faceless Journey?</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+                Join thousands of creators who are building successful brands without showing their faces.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">
+                    <i class="fab fa-instagram mr-2"></i> Follow @ReelVision
+                </button>
+                <button class="bg-black bg-opacity-20 text-white px-8 py-3 rounded-full font-bold border border-white border-opacity-30 hover:bg-opacity-30 transition">
+                    <i class="fas fa-envelope mr-2"></i> Get Templates
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-camera-retro text-2xl gradient-text"></i>
+                        <h3 class="text-xl font-bold gradient-text">ReelVision</h3>
+                    </div>
+                    <p class="text-gray-400">Premium faceless content created with Whop.com templates.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Reels</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Templates</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tutorials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Whop.com Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Get the latest faceless content tips straight to your inbox.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l focus:outline-none focus:ring-2 focus:ring-purple-500 w-full">
+                        <button class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-r">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 ReelVision. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for reel cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const reelCards = document.querySelectorAll('.reel-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            reelCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.5s ease';
+                observer.observe(card);
+            });
+            
+            // Gradient animation for CTA button
+            const ctaBtn = document.querySelector('.cta-button');
+            if (ctaBtn) {
+                setInterval(() => {
+                    ctaBtn.style.background = `linear-gradient(45deg, 
+                        hsl(${Math.random() * 360}, 100%, 50%), 
+                        hsl(${Math.random() * 360}, 100%, 50%))`;
+                }, 8000);
+            }
+        });
+    </script>
+</body>
+</html>
